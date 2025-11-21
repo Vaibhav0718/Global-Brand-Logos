@@ -1,0 +1,396 @@
+/* =========================================================
+   GLOBAL SUNSET THEME
+   Deep sky blue → soft blue → warm cream → light orange
+   ========================================================= */
+
+   :root {
+    --sky-deep:   #123a6a;   /* top sky */
+    --sky-soft:   #3f76b4;   /* mid sky */
+    --horizon:    #f5e7c5;   /* light cream at horizon */
+    --sand-soft:  #f2d3a3;   /* warm soft sand */
+  
+    --page-bg:    #f5f6fb;
+    --card-bg:    #ffffff;
+  
+    --text-main:  #0f172a;
+    --text-soft:  #4b5563;
+    --border-soft:#e2e8f0;
+  }
+  
+  /* =========================
+     BASE RESET
+  ========================= */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--page-bg);
+    color: var(--text-main);
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* =========================
+     LAYOUT
+  ========================= */
+  
+  .container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+  }
+  
+  /* =========================
+     BUTTONS
+  ========================= */
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2.2rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  /* Primary (Add to Whiteboard) */
+  .btn-primary {
+    background: #0a4bff;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 10px 22px rgba(10, 75, 255, 0.32);
+  }
+  
+  .btn-primary:hover {
+    background: #083bcc;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(10, 75, 255, 0.45);
+  }
+  
+  /* Outline (GitHub) - BLUE */
+  .btn-outline {
+    background: rgba(255, 255, 255, 0.2);
+    color: #0a4bff;
+    border: 2px solid #0a4bff;
+    backdrop-filter: blur(6px);
+  }
+  
+  .btn-outline:hover {
+    background: rgba(10, 75, 255, 0.12);
+    color: #083bcc;
+    border-color: #083bcc;
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     HERO HEADER (Sunset Sky)
+  ========================= */
+  
+  .hero-header {
+    padding: 5rem 0 4.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(
+      to bottom,
+      var(--sky-deep) 0%,
+      var(--sky-soft) 38%,
+      var(--horizon) 72%,
+      var(--sand-soft) 100%
+    );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .hero-content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  
+  /* Athena sun-glow logo (bigger + centered) */
+  .hero-logo {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 1.8rem;
+    padding: 20px;
+    border-radius: 999px;
+  
+    background: radial-gradient(circle at 50% 50%, #ffe9a8 0%, transparent 60%);
+    box-shadow:
+      0 0 0 10px rgba(255, 255, 255, 0.22),
+      0 32px 60px rgba(249, 198, 94, 0.55);
+  }
+  
+  .hero-title {
+    margin: 0 0 0.7rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+  
+  .hero-subtitle {
+    margin: 0 auto 2rem;
+    max-width: 650px;
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.92);
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* =========================
+     LOGO PREVIEW (Soft blue)
+  ========================= */
+  
+  .logos {
+    padding: 4rem 0 4.2rem;
+    background: linear-gradient(
+      to bottom,
+      #dce7f7 0%,
+      #eaf0fb 40%,
+      #f8f5ef 100%
+    );
+  }
+  
+  .logos h2 {
+    text-align: center;
+    margin: 0 0 0.4rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    margin: 0;
+    color: var(--text-soft);
+  }
+  
+  /* 3-column fixed layout */
+  .logo-grid {
+    margin-top: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.3rem;
+    justify-items: center;
+  }
+  
+  /* Card */
+  .logo-card {
+    width: 100%;
+    max-width: 360px;
+    height: 340px;
+    background: var(--card-bg);
+    border-radius: 1.2rem;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s ease;
+  }
+  
+  .logo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+    border-color: #cbd5e1;
+  }
+  
+  .logo-image {
+    background: #f3f4f6;
+    border-radius: 1rem;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-image img {
+    max-width: 92%;
+    max-height: 92%;
+    object-fit: contain;
+  }
+  
+  .logo-card h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+  
+  /* =========================
+     ABOUT SECTION
+  ========================= */
+  
+  .about-library {
+    padding: 4.2rem 0 3.6rem;
+    text-align: center;
+    background: linear-gradient(
+      to bottom,
+      #fff7e7 0%,
+      #fbe8c7 50%,
+      #fff9ef 100%
+    );
+    border-top: 1px solid #f5deb5;
+    border-bottom: 1px solid #f5deb5;
+  }
+  
+  .about-title {
+    margin: 0 0 1.1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8a4b16;
+  }
+  
+  .about-text {
+    margin: 0 auto;
+    max-width: 700px;
+    line-height: 1.7;
+    color: #7c2d12;
+  }
+  
+  /* =========================
+     BUILD PREFABS
+  ========================= */
+  
+  .build-prefabs {
+    padding: 4.5rem 0 4.5rem;
+    text-align: center;
+    background: linear-gradient(
+      to bottom,
+      #fff7ee 0%,
+      #f9eee2 40%,
+      #f5f3ef 100%
+    );
+  }
+  
+  .build-title {
+    margin: 0 0 1rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #123a6a;
+  }
+  
+  .build-text {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+  }
+  
+  /* CTA */
+  .build-btn {
+    padding: 1rem 2.7rem;
+    background: #0f766e;
+    border-radius: 999px;
+    color: white;
+    font-size: 1.03rem;
+    font-weight: 600;
+    box-shadow: 0 0 32px rgba(15, 118, 110, 0.45);
+    transition: 0.2s;
+  }
+  
+  .build-btn:hover {
+    background: #115e59;
+    transform: translateY(-2px);
+    box-shadow: 0 0 42px rgba(15, 118, 110, 0.65);
+  }
+  
+  /* =========================
+     FOOTER
+  ========================= */
+  
+  .site-footer {
+    background: linear-gradient(to right, #0b2544, #123a6a);
+    padding: 3rem 0 2.6rem;
+    text-align: center;
+    color: rgba(241, 245, 249, 0.9);
+  }
+  
+  .footer-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  
+  .footer-title {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footer-title strong {
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .footer-highlight {
+    color: #fbbf24;
+    font-weight: 500;
+  }
+  
+  .footer-meta {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: rgba(209, 213, 219, 0.9);
+  }
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  
+  @media (max-width: 960px) {
+    .logo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .hero-header {
+      padding: 4.4rem 0 3.4rem;
+    }
+  
+    .hero-title {
+      font-size: 2.25rem;
+    }
+  
+    .hero-logo {
+      width: 130px;
+      height: 130px;
+      padding: 16px;
+    }
+  
+    .logo-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .logo-card {
+      max-width: 100%;
+      height: 310px;
+    }
+  
+    .logo-image {
+      height: 180px;
+    }
+  }
+  
